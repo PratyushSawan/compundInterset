@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<style>
+    h1{
+        text-align: center;
+        font-size: 20px;
+        font-weight: bold;
+        margin-bottom: 20px;
+        padding-bottom:10px ;
+        border-bottom: 1px solid black;
+    }
+    .inputTitle{
+        margin-right: 2em;
+        margin-bottom: 1em;
+    }
+    .enter{
+        margin-left: 20px;
+        border: 1px solid black;
+    }
+</style>
+<body>
+    <h1>Compund interst finding Program</h1>
+    <center>
+        <!-- <table>
+     <th><input type="button"class="inputTitle" value="Enter Principe Amount"></th>
+    <tr><input type="number"class="enter" placeholder="enter princple Amount" id="principle">
+    <th><input type="button" class="inputTitle"value="Enter Rate"></th>
+    <input type="number"class="enter" placeholder="enter Rate" id="rate">
+    <th><input type="button"class="inputTitle" value="Enter Time"></th>
+    <input type="number"class="enter" placeholder="Enter Time" id="time">
+    </table> -->
+
+    <table class="table-fixed">
+        <thead>
+          <tr>
+            <th class="w-1/2 px-4 py-2">Title</th>
+            <th class="w-1/4 px-4 py-2">Input data</th>
+            
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="border px-4 py-2">Enter Princple Amount</td>
+            <td class="border px-4 py-2"><input type="number"class="enter" placeholder="enter princple Amount" id="principle"></td>
+
+          </tr>
+          <tr class="bg-gray-100">
+            <td class="border px-4 py-2">Enter Rate</td>
+            <td class="border px-4 py-2"><input type="number"class="enter" placeholder="enter Rate" id="rate"></td>
+        
+          </tr>
+          <tr>
+            <td class="border px-4 py-2">Enter Time period In year</td>
+            <td class="border px-4 py-2"><input type="number"class="enter" placeholder="Enter Time" id="time"></td>
+           
+          </tr>
+        </tbody>
+      </table>
+</center>
+<br>
+<center>
+    <input type="button" onclick="findCompundInterst()" value="Find CI">
+</center>
+<br>
+<center>
+    <input type="number" placeholder="Your compund interst is" class="enter" id="principle">
+</center>
+</body>
+<script>
+    function findCompundInterst(){
+        console.log('clicked')
+    let principle=document.getElementById('principle');
+    console.log(principle.value);
+    let rate=document.getElementById('rate');
+    console.log(rate.value);
+    let time = document.getElementById('time');
+    console.log(time.value);
+   
+    let sum = (1+(rate.value/100));
+
+    let compund = principle.value * Math.pow(sum,time.value);
+    console.log(compund);
+    }
+</script>
+</html>
