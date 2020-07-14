@@ -69,12 +69,12 @@
 </center>
 <br>
 <center>
-    <input type="number" placeholder="Your compund interst is" class="enter" id="principle">
+    <input type="text" placeholder="Your compund interst is" class="enter" id="output">
 </center>
 </body>
 <script>
     function findCompundInterst(){
-        console.log('clicked')
+    console.log('clicked')
     let principle=document.getElementById('principle');
     console.log(principle.value);
     let rate=document.getElementById('rate');
@@ -86,6 +86,11 @@
 
     let compund = principle.value * Math.pow(sum,time.value);
     console.log(compund);
+    let ans = document.getElementById('output');
+    console.log(ans.value);
+    ans.value = compund;
+    console.log(ans.value);
+           
     }
 </script>
 </html>
